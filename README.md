@@ -34,14 +34,11 @@ Orb Invader is a thrilling 2D shooter game where you defend against descending o
 - GLUT/GLFW
 - C++
 
-## Warning
-
-This project is my class assignment for **CSE423 - Computer Graphics**. Please refrain from copying or using this code directly for your own assignments. Academic integrity is important, and I encourage you to develop your own solutions.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+## Warning
 
+This project is my class assignment for **CSE423 - Computer Graphics**. Also, this was the first game I made with C++ & OpenGL. Therefore, please mind any mistakes as well as anything dumb :) 
 Enjoy the game and happy coding!
