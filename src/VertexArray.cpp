@@ -1,4 +1,4 @@
-#include "VertexArray.h"
+#include "includes/VertexArray.h"
 
 VertexArray::VertexArray() {
     glGenVertexArrays(1, &m_RendererID);
@@ -21,6 +21,7 @@ void VertexArray::AddBuffer(const VertexBuffer& vb, const VertexBufferLayout& la
 
         offset += element.count * VertexBufferElement::GetSizeOfType(element.type);
     }
+    m_NumVertices = vb.GetSize() / layout.GetStride();
 }
 
 void VertexArray::Bind() const {

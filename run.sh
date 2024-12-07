@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Configuration variables
-BUILD_TOOL="ninja" # Change to "make" if desired
+# Configuration
+BUILD_TOOL="ninja"
 BUILD_DIR="./build"
-EXECUTABLE="./OpenGL-Project"
+EXECUTABLE="./Orb-Invaders"
 
 # Function to display usage
 function show_help() {

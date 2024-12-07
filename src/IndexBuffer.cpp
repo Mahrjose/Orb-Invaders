@@ -1,4 +1,4 @@
-#include "IndexBuffer.h"
+#include "includes/IndexBuffer.h"
 
 IndexBuffer::IndexBuffer(const void* data, unsigned int count) : m_Count(count) {
     glGenBuffers(1, &m_RendererID);

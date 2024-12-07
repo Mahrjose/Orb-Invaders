@@ -9,5 +9,6 @@
 class Renderer {
    public:
     void Clear() const;
-    void Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const;
+    void DrawT(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const;
+    void DrawP(const unsigned int& start, const VertexArray& va, const Shader& shader, const float& pointSize = 1.0f) const;
 };

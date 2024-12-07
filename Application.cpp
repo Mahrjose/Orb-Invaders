@@ -1,13 +1,14 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "ErrorHandler.h"
-#include "IndexBuffer.h"
-#include "Renderer.h"
-#include "Shader.h"
-#include "Texture.h"
-#include "VertexArray.h"
-#include "VertexBuffer.h"
+#include "src/includes/ErrorHandler.h"
+#include "src/includes/GameUI.h"
+#include "src/includes/IndexBuffer.h"
+#include "src/includes/Renderer.h"
+#include "src/includes/Shader.h"
+#include "src/includes/Texture.h"
+#include "src/includes/VertexArray.h"
+#include "src/includes/VertexBuffer.h"
 
 GLFWwindow* Initialize() {
     if (!glfwInit()) {
@@ -16,7 +17,7 @@ GLFWwindow* Initialize() {
     }
 
     // Create a GLFW window
-    GLFWwindow* window = glfwCreateWindow(960, 540, "OpenGL Tutorials", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(683, 738, "Orb Invader", NULL, NULL);
     if (!window) {
         std::cerr << "Failed to create GLFW window!" << std::endl;
         glfwTerminate();
@@ -45,10 +46,15 @@ int main(void) {
         return -1;
     }
 
+    // Shader shader("resources/shaders/basic.glsl");
+    // shader.Bind();
+
     Renderer renderer;
+    GameUI ui("../resources/shaders/MenuLine.shader");
 
     while (!glfwWindowShouldClose(window)) {
         renderer.Clear();
+        ui.DrawLineDivider();
 
         glfwSwapBuffers(window);
         glfwPollEvents();

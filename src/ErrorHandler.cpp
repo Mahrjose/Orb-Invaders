@@ -1,4 +1,4 @@
-#include "ErrorHandler.h"
+#include "includes/ErrorHandler.h"
 
 void ErrorHandler::EnableDebugOutput() {
     glEnable(GL_DEBUG_OUTPUT);                                                             // Enable OpenGL debug output

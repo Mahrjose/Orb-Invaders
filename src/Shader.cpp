@@ -1,4 +1,4 @@
-#include "Shader.h"
+#include "includes/Shader.h"
 
 #include <fstream>
 #include <iostream>
@@ -16,6 +16,7 @@ Shader::~Shader() {
 }
 
 ShaderProgramSource Shader::ParseShader(const std::string& file) {
+    // !!! ===> Please pass path relative to this file not the main application
     std::ifstream stream(file);
 
     enum class ShaderType {
